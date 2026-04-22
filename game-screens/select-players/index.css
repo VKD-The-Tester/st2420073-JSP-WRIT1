@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+body {
+  background-color: lightcyan;
+}
+
+* {
+  font-family: Outfit;
+}
+
+#btn-next,
+#btn-start {
+  font-size: 1.5rem;
+  font-weight: bold;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#btn-next {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+}
+
+#btn-start {
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+}
+
+.add-hover:hover,
+.delete-hover:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.header-player-count {
+  display: inline-block;
+}
+
+td,
+th {
+  vertical-align: middle;
+}
