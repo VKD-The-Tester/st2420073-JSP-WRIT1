@@ -37,8 +37,3 @@ body {
 .header-player-count {
   display: inline-block;
 }
-
-td,
-th {
-  vertical-align: middle;
-}
