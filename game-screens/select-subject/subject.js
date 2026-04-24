@@ -14,8 +14,18 @@ const mixedText = document.getElementById("subject-mixed-text");
 
 let category = "";
 
-const responseObj = await fetch("../questions.json");
-const questionData = await responseObj.json();
+const JSONQuestions = async () => {
+  const responseObj = await fetch("../questions.json");
+  const questionData = await responseObj.json();
+
+  return questionData;
+};
+
+let questions = {};
+
+JSONQuestions().then((data) => {
+  questions = data;
+});
 
 listGroup.forEach((item) => {
   item.addEventListener("dblclick", (e) => {
@@ -26,7 +36,8 @@ listGroup.forEach((item) => {
       listItemHTML.style.color = "green";
       category = HTMLText.textContent.trim();
       console.log(category);
-      const HTMLQuestions = questionData[category];
+      const HTMLQuestions = questions.questions[category];
+      localStorage.setItem("chosenCategory", category);
       localStorage.setItem("HTMLQuestions", JSON.stringify(HTMLQuestions));
     }
 
@@ -37,7 +48,8 @@ listGroup.forEach((item) => {
       listItemCSS.style.color = "green";
       category = CSSText.textContent.trim();
       console.log(category);
-      const CSSQuestions = questionData[category];
+      const CSSQuestions = questions.questions[category];
+      localStorage.setItem("chosenCategory", category);
       localStorage.setItem("CSSQuestions", JSON.stringify(CSSQuestions));
     }
 
@@ -48,7 +60,8 @@ listGroup.forEach((item) => {
       listItemJS.style.color = "green";
       category = JSText.textContent.trim();
       console.log(category);
-      const JSQuestions = questionData[category];
+      const JSQuestions = questions.questions[category];
+      localStorage.setItem("chosenCategory", category);
       localStorage.setItem("JSQuestions", JSON.stringify(JSQuestions));
     }
 
@@ -61,13 +74,35 @@ listGroup.forEach((item) => {
       console.log(category);
       // Method Chaining
       const mixedQuestions = [
-        ...questionData.HTML,
-        ...questionData.CSS,
-        ...questionData.JS,
+        ...questions.questions.HTML,
+        ...questions.questions.CSS,
+        ...questions.questions.JS,
       ]
         .sort(() => Math.random() - 0.5)
         .slice(0, 5);
+      localStorage.setItem("chosenCategory", category);
       localStorage.setItem("mixedQuestions", JSON.stringify(mixedQuestions));
     }
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const retrievedCategory = localStorage.getItem("chosenCategory");
+
+  listGroup.forEach((i) => {
+    i.style.removeProperty("color");
+  });
+
+  if (retrievedCategory === HTMLText.textContent.trim()) {
+    listItemHTML.style.color = "green";
+  }
+  if (retrievedCategory === CSSText.textContent.trim()) {
+    listItemCSS.style.color = "green";
+  }
+  if (retrievedCategory === JSText.textContent.trim()) {
+    listItemJS.style.color = "green";
+  }
+  if (retrievedCategory === mixedText.textContent.trim()) {
+    listItemMixed.style.color = "green";
+  }
 });
