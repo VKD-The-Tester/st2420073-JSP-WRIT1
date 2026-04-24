@@ -1,0 +1,130 @@
+{
+  "questions": {
+    "HTML": [
+      {
+        "text": "What does HTML stand for?",
+        "options": [
+          "HyperText Markup Language",
+          "HyperText Markdown Language",
+          "HyperTypography Markdown Language",
+          "HyperTypography Markup Language"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "text": "What is HTML used for?",
+        "options": [
+          "The interactivity of a website.",
+          "The structuring of a website.",
+          "The styling of a website.",
+          "The hosting of a website."
+        ],
+        "answerIndex": 1
+      },
+      {
+        "text": "Which HTML element would allow a user to navigate to a new webpage?",
+        "options": [
+          "<a dest=''></a>",
+          "<NavLink to=''></NavLink>",
+          "<Link href=''></Link>",
+          "<a href=''></a>"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "text": "Which HTML element creates an unordered list?",
+        "options": ["<ol></ol>", "<dl></dl>", "<ul></ul>", "<pl></pl>"],
+        "answerIndex": 2
+      },
+      {
+        "text": "Which HTML element creates a button?",
+        "options": [
+          "<button></button>",
+          "<btn></btn>",
+          "<butt></butt>",
+          "<clicker></clicker>"
+        ],
+        "answerIndex": 0
+      }
+    ],
+    "CSS": [
+      {
+        "text": "What does CSS stand for?",
+        "options": [
+          "Cascading Stylistic Sheets",
+          "Cascading Style Sheets",
+          "Cool Style Sheets",
+          "Cool Stylistic Sheets"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "text": "What symbol would you select to apply a global style to all of the HTML elements in a CSS file?",
+        "options": ["*", "_", "=", "~"],
+        "answerIndex": 0
+      },
+      {
+        "text": "What CSS property allows you to change the font in an HTML document and provide backup fonts?",
+        "options": [
+          "font-group",
+          "font-society",
+          "font-organization",
+          "font-family"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "text": "Which CSS pseudo class will get signaled when a user moves their cursor over an element?",
+        "options": [":popover-open", ":auto-fill", ":hover", ":focus"],
+        "answerIndex": 2
+      },
+      {
+        "text": "Which CSS property is meant to change the spacing between an element's content and its border?",
+        "options": ["padding", "margin", "border", "outline"],
+        "answerIndex": 0
+      }
+    ],
+    "JS": [
+      {
+        "text": "What does JS stand for?",
+        "options": [
+          "Just Snippets",
+          "Jelly Sandwiches",
+          "Java Sucks",
+          "JavaScript"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "text": "How do you access an element's id?",
+        "options": [
+          "document.getElementById('');",
+          "document.getElementsById('');",
+          "doc.getElementsById('');",
+          "doc.getElementById('');"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "text": "Which method would implement an event listener?",
+        "options": [
+          "document.addEventListener()",
+          "document.insertEventListener()",
+          "document.includeEventListener()",
+          "document.implementEventListener()"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "text": "How would you declare a mutable variable?",
+        "options": ["mut", "const", "public", "let"],
+        "answerIndex": 3
+      },
+      {
+        "text": "How can you access the text content of certain elements?",
+        "options": [".textData", ".outerHTML", ".textContent", ".innerHTML"],
+        "answerIndex": 2
+      }
+    ]
+  }
+}
